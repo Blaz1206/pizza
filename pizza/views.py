@@ -12,6 +12,6 @@ def templatePizza(request):
 
     pizzas=[]
     for pizza in Pizza.objects.all():
-        pizzas.append({"name":pizza.name,"price":pizza.price})
+        pizzas.append({"name":pizza.name,"price":pizza.price,"image":pizza.img})
 
     return render(request, 'pizza.html',{"pizzas":pizzas})
